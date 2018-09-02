@@ -1,10 +1,10 @@
-package com.base.demo.repository;
+package com.base.repository;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.base.demo.entities.Privilege;
-import com.base.demo.entities.User;
+import com.base.entities.Privilege;
+import com.base.entities.User;
 
 public interface PrivilegeRepository extends CrudRepository<Privilege, Long> {
 

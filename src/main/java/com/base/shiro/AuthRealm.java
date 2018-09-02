@@ -1,4 +1,4 @@
-package com.base.demo.shiro;
+package com.base.shiro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +16,10 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.base.demo.entities.Module;
-import com.base.demo.entities.Role;
-import com.base.demo.entities.User;
-import com.base.demo.service.UserService;
+import com.base.entities.Module;
+import com.base.entities.Role;
+import com.base.entities.User;
+import com.base.service.UserService;
 
 
 public class AuthRealm extends AuthorizingRealm{

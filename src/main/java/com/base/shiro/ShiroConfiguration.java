@@ -1,4 +1,4 @@
-package com.base.demo.shiro;
+package com.base.shiro;
 
 import java.util.LinkedHashMap;
 
@@ -11,6 +11,8 @@ import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreato
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.base.controller.LoginController;
 
 import org.apache.shiro.mgt.SecurityManager;
 /**
@@ -32,6 +34,9 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/jsp/login.jsp*", "anon"); //表示可以匿名访问
         filterChainDefinitionMap.put("/loginUser", "anon"); 
         filterChainDefinitionMap.put("/logout*","anon");
+        filterChainDefinitionMap.put("/static/**","anon");
+        
+        
         filterChainDefinitionMap.put("/jsp/error.jsp*","anon");
         filterChainDefinitionMap.put("/jsp/index.jsp*","authc");
         filterChainDefinitionMap.put("/*", "authc");//表示需要认证才可以访问
@@ -58,7 +63,7 @@ public class ShiroConfiguration {
     //配置自定义的密码比较器
     @Bean(name="credentialsMatcher")
     public CredentialsMatcher credentialsMatcher() {
-        return new com.base.demo.shiro.CredentialsMatcher();
+        return new com.base.shiro.CredentialsMatcher();
     }
     @Bean
     public LifecycleBeanPostProcessor lifecycleBeanPostProcessor(){

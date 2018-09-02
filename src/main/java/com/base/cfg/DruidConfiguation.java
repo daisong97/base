@@ -1,4 +1,4 @@
-package com.base.demo.cfg;
+package com.base.cfg;
 
 import javax.sql.DataSource;
 

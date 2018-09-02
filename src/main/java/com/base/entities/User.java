@@ -1,4 +1,4 @@
-package com.base.demo.entities;
+package com.base.entities;
 
 import java.util.Set;
 
