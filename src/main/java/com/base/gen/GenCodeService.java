@@ -15,6 +15,7 @@ import com.base.gen.vo.ColumnVo;
 import com.base.gen.vo.TableVo;
 
 @Service
+
 public class GenCodeService {
 	@Autowired
 	private DataSource dataSource;
